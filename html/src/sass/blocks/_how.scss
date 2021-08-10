@@ -1,0 +1,48 @@
+.how {
+   padding: 143px 0 176px;
+   &__subtitle {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 48px;
+      text-align: center;
+      color: $black;
+      margin-top: 25px;
+   }
+   &__wrapper {
+      display: flex;
+      justify-content: space-around;
+      margin: 56px auto 0;
+   }
+   &__video {
+      width: 600px;
+      height: 292px;
+      box-shadow: 0px 14px 24px rgba(204, 204, 204, 0.65);
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background-image: url('../img/how-it-works.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 10px;
+      &_play {
+         border-radius: 100%;
+         border: none;
+         background-color: $blue;
+         position: absolute;
+         width: 120px;
+         height: 120px;
+         top: calc(50% - 60px);
+         left: calc(50% - 60px);
+         img {
+            width: 48px;
+            height: 48px;
+            margin-left: 10px;
+            pointer-events: none;
+         }
+         &:focus {
+            outline: none
+         }
+      }
+   }
+}

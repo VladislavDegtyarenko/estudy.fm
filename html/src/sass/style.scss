@@ -1,0 +1,85 @@
+@import "libs/bootstrap-reboot.min";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+//bootstrap mixins
+@import "../../node_modules/bootstrap/scss/vendor/rfs";
+@import "../../node_modules/bootstrap/scss/mixins/deprecate";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+@import "../../node_modules/bootstrap/scss/mixins/caret";
+@import "../../node_modules/bootstrap/scss/mixins/nav-divider";
+@import "../../node_modules/bootstrap/scss/mixins/border-radius";
+@import "../../node_modules/bootstrap/scss/mixins/box-shadow";
+@import "../../node_modules/bootstrap/scss/mixins/gradients";
+@import "../../node_modules/bootstrap/scss/mixins/transition";
+
+//bootstrap components
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/transitions";
+
+
+@import "libs/swiper-bundle.min.css";
+@import "libs/aos.css";
+@import "libs/fonts";
+@import "base/variables";
+@import "base/animation";
+@import "blocks/slider";
+@import "blocks/text";
+@import "blocks/button";
+@import "blocks/logo";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/promo";
+@import "blocks/start";
+@import "blocks/solution";
+@import "blocks/work";
+@import "blocks/privacy";
+@import "blocks/testimonials";
+@import "blocks/how";
+@import "blocks/footer";
+@import "blocks/modal";
+
+* {
+   font-family: "Mulish" !important;
+   font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, ol, ul, p {
+   padding: 0;
+   margin: 0;
+}
+
+div, button, a {
+   &:active,
+   &:focus {
+      outline: none;
+   }
+}
+
+.container {
+   width: 1258px;
+   max-width: 98%;
+   margin: 0 auto;
+   position: relative;
+}
+
+.noScroll {
+   overflow: hidden;
+}
+
+.anchorOffset {
+   &:target:before {
+      content: "";
+      display: block;
+      height: 140px; /* fixed header height*/
+      margin: -140px 0 0; /* negative fixed header height */
+      pointer-events: none;
+   }
+}
+
+body {
+   min-width: 320px;
+}
+
+@import "base/media";

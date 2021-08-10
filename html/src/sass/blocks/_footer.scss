@@ -1,0 +1,115 @@
+.footer {
+   padding: 50px 0 115px;
+   background-color: $black;
+   position: relative;
+   &__inner {
+      width: 1024px;
+      max-width: 100%;
+      margin: 0 auto;
+   }
+   &__wrapper {
+      margin-top: 40px;
+      display: flex;
+      &:nth-of-type(2) {
+         display: none;
+      }
+   }
+   &__logo {
+      width: 90px;
+      height: 90px;
+      margin-left: -10px;
+   }
+   &__links {
+      &:nth-of-type(1) {
+         margin-right: 60px;
+      }
+      &:nth-of-type(2) {
+         margin-right: 30px;
+      }
+      &_title {
+         display: block;
+         font-weight: 900;
+         font-size: 20px;
+         line-height: 25px;
+         color: #FFF;
+         background: none;
+         border: none;
+         padding: 0;
+         &:hover,
+         &:active {
+            color: #fff;
+            text-decoration: none;
+         }
+      }
+      &_inner {
+         margin-top: 25px;
+         display: flex;
+         div {
+            margin-right: 90px;
+         }
+      }
+      &_link {
+         display: block;
+         margin-bottom: 12px;
+         font-weight: 300;
+         font-size: 14px;
+         line-height: 18px;
+         color: #E7ECEE;
+         &:hover {
+            text-decoration: none;
+            color: #E7ECEE;
+         }
+      }
+      &_social {
+         margin-right: 20px;
+      }
+      &_collapse {
+         padding: 5px 0;
+         position: relative;
+         &-active {
+            &:before {
+               transform: rotate(180deg)
+            }
+         }
+         &:not(:first-of-type) {
+            margin-top: 20px;
+         }
+         &:before {
+            content: "";
+            width: 17px;
+            height: 11px;
+            background-image: url('../icons/collapse-arrow.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 13px;
+            right: 0px;
+            transition: all 0.5s;
+            pointer-events: none;
+         }
+         &:last-of-type:before {
+            display: none;
+         }
+      }
+   }
+   &__copyright {
+      background: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 15px 0;
+      width: 100%;
+      &_inner {
+         margin: 0 auto;
+         width: 1024px;
+         max-width: 100%;
+         font-weight: 300;
+         font-size: 14px;
+         line-height: 18px;
+         color: #C7D1D2;
+      }
+   }
+}
+.noclick {
+   pointer-events: none;
+}

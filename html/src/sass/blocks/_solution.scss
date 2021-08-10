@@ -1,0 +1,99 @@
+.solution {
+   padding: 177px 0;
+   &__inner {
+      position: relative;
+      width: 1060px;
+      max-width: 100%;
+      margin: 0 auto;
+   }
+   &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1px;
+      overflow: hidden;
+      margin-top: 55px;
+   }
+   &__card {
+      text-align: center;
+      &_inner {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         position: relative;
+         padding: 40px 20px;
+         width: 100%;
+         height: 100%;
+         font-weight: 700;
+         font-size: 16px;
+         line-height: 22.4px;
+      }
+      &_img {
+         align-self: center;
+         margin-bottom: 14px;
+         width: 140px;
+         height: 140px;
+      }
+   }
+   &__lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      &_vertical {
+         position: absolute;
+         top: 0%;
+         left: 0%;
+         transform: scaleY(0);
+         width: 100%;
+         height: 100%;
+         span {
+            display: block;
+            height: 100%;
+            width: 1px;
+            background-color: #E7ECEE;
+            position: absolute;
+            top: 0;
+            &:nth-child(1) {
+               left: 25%;
+            }
+            &:nth-child(2) {
+               left: 50%;
+            }
+            &:nth-child(3) {
+               left: 75%;
+            }
+         }
+      }
+      &_horizontal {
+         position: absolute;
+         top: 0;
+         left: 0;
+         transform: scaleX(0);
+         width: 100%;
+         height: 100%;
+         span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #E7ECEE;
+            position: absolute;
+            left: 0;
+            &:nth-child(1) {
+               top: 25%;
+               display: none;
+            }
+            &:nth-child(2) {
+               top: 52%;
+            }
+            &:nth-child(3) {
+               top: 75%;
+               display: none;
+            }
+         }
+      }
+   }
+}

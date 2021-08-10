@@ -1,0 +1,727 @@
+@media (max-width: 1199px) {
+   .title-1 {
+      font-size: 40px;
+      line-height: 48px;
+   }
+   .title-2 {
+      font-size: 26px;
+      line-height: 32.63px;
+   }
+   .section-title__text {
+      font-size: 40px;
+   }
+   .nav {
+      &__item {
+         &:not(:last-child) {
+            margin-right: 20px;
+         }
+      }
+      &__link {
+         font-size: 14px;
+      }
+   }
+   .promo {
+      &:before {
+         height: 58%;
+      }
+      &__logo {
+         width: 140px;
+         height: 125px;
+      }
+      &__title {
+         margin-top: 25px;
+      }
+      &__button {
+         margin-top: 60px;
+      }
+      &__img {
+         object-fit: contain;
+      }
+   }
+   .start {
+      &__card {
+         &_list {
+            margin-top: 18px;
+         }
+      }
+   }
+   .solution {
+      &__lines {
+         &_horizontal {
+            span {
+               &:nth-child(2) {
+                  top: 51%;
+               }
+            }
+         }
+      }
+   }
+   .work {
+      #workSlider {
+         .swiper-slide {
+            width: 341px !important;
+         }
+      }
+      &__card {
+         &_title {
+            font-size: 30px;
+            line-height: 36px;
+         }
+      }
+   }
+   .testimonials {
+      &__wrapper {
+         width: 764px;
+      }
+      &__card {
+         &_inner {
+            width: 328px;
+         }
+      }
+   }
+   .how {
+      &__video {
+         width: 460px;
+         height: 220px;
+         &_play {
+            width: 120px;
+            height: 120px;
+            top: calc(50% - 60px);
+            left: calc(50% - 60px);
+            img {
+               width: 48px;
+               height: 48px;
+            }
+         }
+      }
+   }
+   .footer {
+      &__links {
+         &:not(:last-child) {
+            margin-right: 30px;
+         }
+         &_inner {
+            div {
+               margin-right: 40px;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 834px) {
+   .title-1 {
+      font-size: 40px;
+      line-height: 50px;
+   }
+   .section-title__text {
+      font-size: 40px;
+      line-height: 50.2px;
+   }
+   .text {
+      font-size: 16px;
+      line-height: 33.78px;
+   }
+   .text-small {
+      font-size: 12px;
+      line-height: 17px;
+   }
+   .header {
+      &__button {
+         width: 280px;
+         height: 60px;
+         margin-bottom: 30px;
+      }
+      &__hamburger {
+         display: inline-block;
+      }
+   }
+   .nav {
+      display: block;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background: #307FDA;
+      align-items: center;
+      overflow: auto;
+      transition: all .5s linear;
+      &-active {
+         display: flex;
+         top: 0;
+         .nav__list {
+            height: 70%;
+            top: 0%;
+         }
+      }
+      &__list {
+         width: 100%;
+         top: 200%;
+         height: 250%;
+         justify-content: space-between;
+         flex-direction: column;
+         position: relative;
+         transition: all .5s linear;
+      }
+      &__item:not(:last-child) {
+         margin-right: 0;
+      }
+      &__link {
+         font-size: 28px;
+         line-height: 35px;
+      }
+      &__line {
+         width: 30px;
+         height: 4px;
+         background-color: #3298FF;
+         display: block;
+         margin: 10px auto;
+         flex-shrink: 0;
+      }
+   }
+   .promo {
+      padding: 114px 0 0px;
+      &__inner {
+         flex-direction: column-reverse;
+         align-items: center;
+      }
+      &__main {
+         width: 80%;
+      }
+      &__title {
+         margin-top: 10px;
+      }
+      &__img {
+         align-self: unset;
+         width: 61%;
+      }
+      &__logo {
+         display: none;
+      }
+      &__title {
+         text-align: center;
+      }
+      &__button {
+         margin: 60px auto 0;
+      }
+   }
+   .start {
+      padding: 90px 0;
+      &__wrapper {
+         width: 715px;
+      }
+      &__card {
+         flex-wrap: wrap;
+         &:nth-of-type(2) {
+            flex-direction: column-reverse;
+            margin-top: 60px;
+         }
+         &_img {
+            width: 100%;
+         }
+         &_heading {
+            padding: 45px 55px;
+            width: 100%;
+         }
+         &_list {
+            display: flex;
+         }
+         &_item {
+            &:not(:last-child):after {
+               content: url('../icons/union.svg');
+               margin-left: 30px;
+               margin-right: 40px;
+            }
+         }
+      }
+   }
+   .solution {
+      padding: 167px 0;
+      &__inner {
+         width: 700px;
+      }
+      &__wrapper {
+         grid-template-columns: repeat(3,1fr);
+         margin-top: 95px;
+      }
+      &__card {
+         &_inner {
+         font-size: 14px;
+         line-height: 19.6px;
+         padding: 20px 15px;
+         }
+      }
+      &__lines {
+         
+         &_vertical {
+            span {
+               &:nth-child(1) {
+                  left: 33%;
+               }
+               &:nth-child(2) {
+                  display: none;
+               }
+               &:nth-child(3) {
+                  left: 67%;
+               }
+            }
+         }
+         &_horizontal {
+            span {
+               &:nth-child(1) {
+                  top: 35%;
+                  display: block;
+               }
+               &:nth-child(2) {
+                  display: none;
+               }
+               &:nth-child(3) {
+                  top: 67%;
+                  display: block;
+               }
+            }
+         }
+      }
+   }
+   .work {
+      padding: 152px 0 120px;
+      &__title {
+         width: 510px;
+         margin: 0 auto;
+         max-width: 100%;
+      }
+      &__wrapper {
+         margin: 100px auto 0;
+      }
+      &__card {
+         hr {
+            margin: 15px auto;
+         }
+         &_heading {
+            padding: 28px 37px;
+         }
+         &_title {
+            font-size: 26px;
+            line-height: 32.63px;
+         }
+         &_descr {
+            font-size: 16px;
+            line-height: 25.6px;
+         }
+      }
+   }
+   .privacy {
+      padding: 140px 0 100px;
+      &__wrapper {
+         width: 710px;
+      }
+      &__item {
+         &_text {
+            font-size: 16px;
+            line-height: 24px;
+         }
+      }
+   }
+   .how {
+      padding: 120px 0;
+      &__wrapper {
+         flex-wrap: wrap;
+         margin: 40px auto 0;
+      }
+      &__video {
+         margin-bottom: 30px;
+      }
+/*       &__video {
+         width: 680px;
+         height: 330px;
+         &_play {
+            width: 132px;
+            height: 132px;
+            top: calc(50% - 66px);
+            left: calc(50% - 66px);
+         }
+      } */
+   }
+   .testimonials {
+      padding: 110px 0 106px;
+      &__card {
+         &_inner {
+            width: 87%;
+            padding: 55px 32px 25px;
+         }
+         &_text {
+            font-size: 18px;
+            line-height: 28.8px;
+         }
+      }
+   }
+   .how {
+      &__subtitle {
+         margin-top: 15px;
+         font-size: 26px;
+         line-height: 41.6px;
+      }
+   }
+   .footer {
+      padding: 50px 0 100px;
+      &__inner {
+         max-width: 90%;
+      }
+      &__copyright {
+         &_inner {
+            max-width: 90%;
+         }
+      }
+      &__wrapper {
+         flex-wrap: wrap;
+      }
+      &__links {
+         width: 50%;
+         &:not(:last-child) {
+            margin-bottom: 50px;
+            margin-right: 0;
+         }
+         &_inner {
+            div {
+               margin-right: 30px;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .start {
+      &__card {
+         &_heading {
+            padding: 20px 30px;
+         }
+         &_item {
+            &:before {
+               margin-right: 10px;
+            }
+            &:not(:last-child):after {
+               margin-left: 10px;
+               margin-right: 10px;
+            }
+         }
+      }
+   }
+   .solution {
+      &__card {
+         &_img {
+            width: 85px;
+            height: 85px;
+         }
+      }
+   }
+   .how {
+      &__video {
+         width: 500px;
+         height: 240px;
+      }
+   }
+   .footer {
+      &__links {
+         &_inner {
+            div {
+               margin-right: 20px;
+            }
+         }
+      }
+   }
+   .modal {
+      &-video {
+         width: 100%;
+         height: 280px;
+      }
+   }
+}
+
+@media (max-width: 575px) {
+   .container {
+      max-width: 100%;
+   }
+   .section-title__text {
+      font-size: 28px;
+      line-height: 35.14px;
+      padding: 0 5px;
+   }
+   .title-1 {
+      font-size: 28px;
+      line-height: 35.14px;
+   }
+   .title-2 {
+      font-size: 20px;
+      line-height: 25.1px;
+   }
+   .anchorOffset {
+      &:target:before {
+         height: 90px; /* fixed header height*/
+         margin: -90px 0 0; /* negative fixed header height */
+      }
+   }
+   .header {
+      &__logo {
+         width: 44px;
+         height: 44px;
+      }
+   }
+   .promo {
+      &:before {
+         background-position: left 20% top;
+         height: 75%;
+      }
+      &__main {
+         width: 100%;
+      }
+      &__img {
+         width: 85%;
+      }
+      &__title {
+         margin-top: 0;
+      }
+      &__button {
+         font-size: 16px;
+         line-height: 20.08px;
+         width: 315px;
+         max-width: 100%;
+         height: 60px;
+      }
+   }
+   .start {
+      padding: 55px 0;
+      &__wrapper {
+         margin-top: 40px;
+      }
+      &__card {
+         &_list {
+            margin-top: 12px;
+            display: block;
+         }
+         &_heading {
+            padding: 31px 36px;
+         }
+         &_item {
+            font-size: 14px;
+            line-height: 29.55px;
+            &:after {
+               display: none;
+            }
+         }
+      }
+   }
+   .solution {
+      padding: 50px 0 30px;
+      &__wrapper {
+         grid-template-columns: repeat(2,1fr);
+      }
+      &__card {
+         &_inner {
+            padding: 14px 7px;
+            font-size: 12px;
+            line-height: 16.8px;
+            font-weight: 300;
+         }
+      }
+      &__lines {
+         
+         &_vertical {
+            span {
+               &:nth-child(1) {
+                  display: none;
+               }
+               &:nth-child(2) {
+                  display: block;
+               }
+               &:nth-child(3) {
+                  display: none;
+               }
+            }
+         }
+         &_horizontal {
+            span {
+               &:nth-child(1) {
+                  top: 27%;
+               }
+               &:nth-child(2) {
+                  top: 51%;
+                  display: block;
+               }
+               &:nth-child(3) {
+                  top: 76%;
+                  display: block;
+               }
+            }
+         }
+      }
+   }
+   .work {
+      padding: 92px 0 57px;
+      &__wrapper {
+         padding-bottom: 50px;
+         .swiper-pagination {
+            display: block;
+         }
+      }
+      #workSlider {
+         .swiper-slide {
+            width: 100% !important;
+         }
+      }
+      &__card {
+         height: auto;
+         hr {
+            margin: 10px 0;
+         }
+         &_descr {
+            font-size: 18px;
+            line-height: 28.8px;
+         }
+      }
+   }
+   .privacy {
+      padding: 110px 0 120px;
+      &__wrapper {
+         margin-top: 55px;
+      }
+      &__item {
+         &_text {
+            font-size: 14px;
+            line-height: 26.43px;
+            flex-shrink: 1;
+         }
+         &_img {
+            width: 90px;
+            margin-right: 25px;
+         }
+      }
+   }
+   .testimonials {
+      padding: 70px 0 75px;
+      &__wrapper {
+         width: 355px;
+         max-width: 100%;
+      }
+      &__card {
+         &_inner {
+            width: 295px;
+         }
+         &_text {
+            font-size: 18px;
+            line-height: 28.8px;
+         }
+         &_position {
+            font-size: 14px;
+            line-height: 17.57px;
+         }
+      }
+   }
+   .how {
+      padding: 81px 0;
+      &__subtitle {
+         font-size: 18px;
+         line-height: 28.8px;
+         margin-top: 33px;
+      }
+      &__video {
+         width: 280px;
+         height: 140px;
+         &_play {
+            width: 78px;
+            height: 78px;
+            top: calc(50% - 39px);
+            left: calc(50% - 39px);
+         }
+         img {
+            width: 25px;
+            height: 25px;
+            margin-left: 5px;
+         }
+      }
+   }
+   .footer {
+      &__wrapper {
+         margin-top: 0;
+         &:nth-of-type(1) {
+            display: none;
+         }
+         &:nth-of-type(2) {
+            display: block;
+         }
+      }
+      &__links {
+         &_inner {
+            margin-top: 15px;
+            div {
+               width: 50%;
+            }
+         }
+         &_title {
+            width: 100%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            &:after {
+               content: "";
+               display: flex;
+               flex-grow: 1;
+               height: 1px;
+               background-image: url('../icons/footer-line.svg');
+               background-repeat: repeat-x;
+               margin-left: 9px;
+               margin-right: 29px;
+            }
+         }
+      }
+      &__logo {
+         display: none;
+      }
+      &__copyright {
+         &_inner {
+            font-size: 12px;
+            line-height: 16px;
+         }
+      }
+   }
+}
+
+@media (max-width: 374px) {
+   body {
+      overflow-x: hidden;
+   }
+   .promo {
+      &__button {
+         margin: 55px auto 0;
+      }
+   }
+   .start {
+      &__card {
+         &_heading {
+            padding: 20px 25px;
+         }
+      }
+   }
+   .testimonials {
+      &__card {
+         &_inner {
+            width: 84%;
+         }
+      }
+   }
+   .footer {
+      &__copyright {
+         &_inner {
+            font-size: 11px;
+         }
+      }
+   }
+   .modal {
+      &-video {
+         height: 190px;
+      }
+   }
+}

@@ -1,0 +1,25 @@
+.privacy {
+   padding: 220px 0 171px;
+   &__wrapper {
+      margin: 80px auto 0;
+      width: 800px;
+      max-width: 100%;
+   }
+   &__item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+      &:not(:last-child) {
+         border-bottom: 1px solid #E7ECEE;
+      }
+      &_text {
+         font-size: 18px;
+         line-height: 27px;
+      }
+      &_img {
+         width: 100px;
+         margin-right: 35px;
+      }
+   }
+}

@@ -1,0 +1,55 @@
+.work {
+   padding: 177px 0 138px;
+   background-color: #E7ECEE;
+   overflow: hidden;
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      .swiper-pagination {
+         display: none;
+      }
+      .swiper-slide {
+         height: unset;
+      }
+   }
+   &__card {
+      height: 100%;
+      width: 100%;
+      padding: 10px 0;
+      opacity: 0;
+      transform: translateY(500px);
+      &_inner {
+         width: 300px;
+         height: 100%;
+         margin: 0px auto;
+         background: #FFF;
+         box-shadow: 0px 10px 20px rgba(173, 185, 196, 0.35);
+         border-radius: 10px;
+         overflow: hidden;
+      }
+      img {
+         width: 100%;
+         height: auto;
+      }
+      hr {
+         margin: 18px auto;
+         border: none;
+         height: 1px;
+         width: 186px;
+         background-color: #E7ECEE;
+      }
+      &_heading {
+         padding: 40px 31px 29px;
+         text-align: center;
+      }
+      &_title {
+         font-size: 30px;
+         line-height: 37.65px;
+      }
+      &_descr {
+         font-size: 18px;
+         line-height: 28.8px;
+      }
+   }
+}

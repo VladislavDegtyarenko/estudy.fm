@@ -1,0 +1,50 @@
+.title-1 {
+   font-weight: 900;
+   font-size: 46px;
+   line-height: 57.73px;
+   color: $black;
+}
+
+.title-2 {
+   font-weight: 900;
+   font-size: 30px;
+   line-height: 37.65px;
+   color: $black;
+}
+
+.section-title {
+   
+   display: flex;
+   justify-content: center;
+   &__inner {
+      margin-bottom: 0;
+   }
+   &__text {
+      padding: 0 35px;
+      font-weight: 900;
+      font-size: 46px;
+      line-height: 57.73px;
+      color: $black;
+      text-align: center;
+      display: inline-block;
+   }
+   &__line {
+      display: block;
+      height: 5px;
+      background-color: #FFC700;
+   }
+}
+
+.text {
+   font-weight: 300;
+   font-size: 18px;
+   line-height: 38px;
+   color: $black;
+}
+
+.text-small {
+   font-weight: 300;
+   font-size: 16px;
+   line-height: 22.59px;
+   color: $black;
+}

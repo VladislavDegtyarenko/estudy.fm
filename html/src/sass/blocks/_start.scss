@@ -1,0 +1,50 @@
+.start {
+   padding: 125px 0 120px;
+   background-color: #E7ECEE;
+   &__wrapper {
+      margin: 85px auto 0;
+      width: 1024px;
+      max-width: 100%;
+   }
+   &__card {
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      box-shadow: 0px 10px 20px rgba(173, 185, 196, 0.35);
+      border-radius: 10px;
+      overflow: hidden;
+      &:not(:first-child) {
+         margin-top: 40px;
+      }
+      &_img {
+         width: 48%;
+         source, img {
+            width: 100%;
+            height: auto;
+         }
+      }
+      &_heading {
+         width: 50%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         padding-left: 71px;
+      }
+      &_list {
+         counter-reset: list-counter;
+         list-style-type: none;
+         padding-left: 0;
+         margin-bottom: 0;
+         margin-top: 24px;
+      }
+      &_item {
+         &:before {
+            counter-increment: list-counter;
+            content: ""counter(list-counter)".";
+            color: $blue;
+            margin-right: 15px;
+            font-weight: 900;
+         }
+      }
+   }
+}
