@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
    });
 
-   function initIframes() {
+   /*    function initIframes() {
       const iframes = document.getElementsByTagName("iframe");
       for (let i = 0; i < iframes.length; i++) {
          if (iframes[i].getAttribute("data-src")) {
@@ -85,42 +85,28 @@ document.addEventListener("DOMContentLoaded", function () {
          }
       }
    }
-   initIframes();
+   initIframes(); */
+
+   const loadIframe = (iframe) => {
+      const url = iframe.getAttribute("data-src");
+      iframe.src = url;
+   };
+
+   const unloadIframe = (iframe) => {
+      iframe.src = "";
+   };
 
    const howToModal = document.querySelectorAll(".modalVideo");
-   let howToModalVideo = [];
-   let howToModalVideoUrl = [];
 
    howToModal.forEach((modal, index) => {
-      /*       howToModalVideo.push(modal.querySelector(".modal-video"));
-      howToModalVideoUrl.push(modal.querySelector(".modal-video").getAttribute("src")); */
+      const iframe = modal.querySelector("iframe");
 
       modal.addEventListener("shown.bs.modal", () => {
-         /*          if (howToModalVideo[index].getAttribute("src") !== howToModalVideoUrl[index]) {
-            howToModalVideo[index].setAttribute("src", howToModalVideoUrl[index]);
-         } */
+         loadIframe(iframe);
       });
 
       modal.addEventListener("hide.bs.modal", () => {
-         modal.setAttribute("src", "");
+         unloadIframe(iframe);
       });
    });
-
-   /*    const howToVideoPlayBtn = document.querySelectorAll(".how__video_play");
-
-   howToVideoPlayBtn.forEach((btn, index) => {
-      btn.onclick = () => {
-         console.log(modal);
-         console.log(index);
-      };
-   }); */
-
-   /*    const videoModals = document.querySelectorAll(".modalVideo");
-
-   videoModals.forEach((modal, index) => {
-      modal.onclick = () => {
-         console.log(modal);
-         console.log(index);
-      };
-   }); */
 });
