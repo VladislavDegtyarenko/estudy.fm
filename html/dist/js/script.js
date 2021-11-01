@@ -1,49 +1,69 @@
 document.addEventListener("DOMContentLoaded", function () {
-   const testimonialsSlider = new Swiper("#testimonialsSlider", {
-      loop: true,
-      direction: "horizontal",
-      updateOnWindowResize: true,
-      navigation: {
-         nextEl: ".swiper-button-next",
-         prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-         el: ".swiper-pagination",
-      },
-      slidesPerView: 3,
-      breakpoints: {
-         1200: {
-            slidesPerView: 3,
-         },
-         576: {
-            slidesPerView: 2,
-         },
-         320: {
-            slidesPerView: 1,
-         },
-      },
-   });
+   let swiperIsLoaded = false;
 
-   const workSlider = new Swiper("#workSlider", {
-      loop: false,
-      slidesPerView: 3,
-      direction: "horizontal",
-      //updateOnWindowResize: true,
-      pagination: {
-         el: ".swiper-pagination",
-      },
-      breakpoints: {
-         1200: {
+   const loadSwiperPlugin = () => {
+      let windowHeight = document.documentElement.clientHeight;
+      let scrolled = document.documentElement.scrollTop;
+
+      if (!swiperIsLoaded && windowHeight + scrolled > 900) {
+         swiperIsLoaded = true;
+
+         /* append swiper.js to the body */
+         let script = document.createElement("script");
+         script.src = "js/swiper-bundle.min.js";
+         document.body.appendChild(script);
+
+         /* setup the nessesarily sliders */
+
+         const testimonialsSlider = new Swiper("#testimonialsSlider", {
+            loop: true,
+            direction: "horizontal",
+            updateOnWindowResize: true,
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+               el: ".swiper-pagination",
+            },
             slidesPerView: 3,
-         },
-         576: {
-            slidesPerView: "auto",
-         },
-         320: {
-            slidesPerView: "auto",
-         },
-      },
-   });
+            breakpoints: {
+               1200: {
+                  slidesPerView: 3,
+               },
+               576: {
+                  slidesPerView: 2,
+               },
+               320: {
+                  slidesPerView: 1,
+               },
+            },
+         });
+
+         const workSlider = new Swiper("#workSlider", {
+            loop: false,
+            slidesPerView: 3,
+            direction: "horizontal",
+            //updateOnWindowResize: true,
+            pagination: {
+               el: ".swiper-pagination",
+            },
+            breakpoints: {
+               1200: {
+                  slidesPerView: 3,
+               },
+               576: {
+                  slidesPerView: "auto",
+               },
+               320: {
+                  slidesPerView: "auto",
+               },
+            },
+         });
+      }
+   };
+   loadSwiperPlugin();
+   window.onscroll = loadSwiperPlugin;
 
    AOS.init({
       once: true,
@@ -76,16 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
          document.body.classList.remove("noScroll");
       });
    });
-
-   /*    function initIframes() {
-      const iframes = document.getElementsByTagName("iframe");
-      for (let i = 0; i < iframes.length; i++) {
-         if (iframes[i].getAttribute("data-src")) {
-            iframes[i].setAttribute("src", iframes[i].getAttribute("data-src"));
-         }
-      }
-   }
-   initIframes(); */
 
    const loadIframe = (iframe) => {
       const url = iframe.getAttribute("data-src");
