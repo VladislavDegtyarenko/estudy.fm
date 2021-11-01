@@ -68,7 +68,7 @@ gulp.task("webp", () =>
       .src("src/img/**/*.+(jpg|png)")
       .pipe(
          webp({
-            quality: 90,
+            quality: 85,
          })
       )
       .pipe(gulp.dest("dist/img"))
@@ -77,7 +77,7 @@ gulp.task("webp", () =>
 gulp.task("images", function () {
    return gulp
       .src("src/img/**/*")
-      .pipe(imagemin([imagemin.mozjpeg({ quality: 90, progressive: true })]))
+      .pipe(imagemin([imagemin.mozjpeg({ quality: 85, progressive: true })]))
       .pipe(gulp.dest("dist/img"));
 });
 
@@ -101,5 +101,5 @@ gulp.task("critical", () => {
 
 gulp.task(
    "default",
-   gulp.parallel("watch", "server", "styles", "scripts", "fonts", "icons", "mailer", "html", "images")
+   gulp.parallel("watch", "server", "styles", "scripts", "fonts", "icons", "mailer", "html", "images", "webp")
 );
