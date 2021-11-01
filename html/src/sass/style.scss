@@ -7,7 +7,6 @@
 @import "../../node_modules/bootstrap/scss/mixins/deprecate";
 @import "../../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "../../node_modules/bootstrap/scss/mixins/caret";
-@import "../../node_modules/bootstrap/scss/mixins/nav-divider";
 @import "../../node_modules/bootstrap/scss/mixins/border-radius";
 @import "../../node_modules/bootstrap/scss/mixins/box-shadow";
 @import "../../node_modules/bootstrap/scss/mixins/gradients";
@@ -93,7 +92,7 @@ body {
 
 @import "base/media";
 
-* {
+/* * {
    outline: 2px dotted red;
 }
 * * {
@@ -117,3 +116,4 @@ body {
 * * * * * * * * {
    outline: 1px solid blue;
 }
+ */
