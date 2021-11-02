@@ -1,69 +1,73 @@
 document.addEventListener("DOMContentLoaded", function () {
    let swiperIsLoaded = false;
 
-   const loadSwiperPlugin = () => {
+   const loadScript = (scriptSrc, onLoadFunc) => {
+      let script = document.createElement("script");
+      script.src = scriptSrc;
+      document.body.appendChild(script);
+      script.onload = onLoadFunc;
+   };
+
+   const sliderSettings = () => {
+      const testimonialsSlider = new Swiper("#testimonialsSlider", {
+         loop: true,
+         direction: "horizontal",
+         updateOnWindowResize: true,
+         navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+         },
+         pagination: {
+            el: ".swiper-pagination",
+         },
+         slidesPerView: 3,
+         breakpoints: {
+            1200: {
+               slidesPerView: 3,
+            },
+            576: {
+               slidesPerView: 2,
+            },
+            320: {
+               slidesPerView: 1,
+            },
+         },
+      });
+
+      const workSlider = new Swiper("#workSlider", {
+         loop: false,
+         slidesPerView: 3,
+         direction: "horizontal",
+         //updateOnWindowResize: true,
+         pagination: {
+            el: ".swiper-pagination",
+         },
+         breakpoints: {
+            1200: {
+               slidesPerView: 3,
+            },
+            576: {
+               slidesPerView: "auto",
+            },
+            320: {
+               slidesPerView: "auto",
+            },
+         },
+      });
+   };
+
+   const initSwiperPlugin = () => {
       let windowHeight = document.documentElement.clientHeight;
       let scrolled = document.documentElement.scrollTop;
 
-      if (!swiperIsLoaded && windowHeight + scrolled > 900) {
+      if (!swiperIsLoaded && windowHeight + scrolled > 1500) {
+         const swiperScriptSrc = "js/swiper-bundle.min.js";
+         loadScript(swiperScriptSrc, sliderSettings);
          swiperIsLoaded = true;
-
-         /* append swiper.js to the body */
-         let script = document.createElement("script");
-         script.src = "js/swiper-bundle.min.js";
-         document.body.appendChild(script);
-
-         /* setup the nessesarily sliders */
-
-         const testimonialsSlider = new Swiper("#testimonialsSlider", {
-            loop: true,
-            direction: "horizontal",
-            updateOnWindowResize: true,
-            navigation: {
-               nextEl: ".swiper-button-next",
-               prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-               el: ".swiper-pagination",
-            },
-            slidesPerView: 3,
-            breakpoints: {
-               1200: {
-                  slidesPerView: 3,
-               },
-               576: {
-                  slidesPerView: 2,
-               },
-               320: {
-                  slidesPerView: 1,
-               },
-            },
-         });
-
-         const workSlider = new Swiper("#workSlider", {
-            loop: false,
-            slidesPerView: 3,
-            direction: "horizontal",
-            //updateOnWindowResize: true,
-            pagination: {
-               el: ".swiper-pagination",
-            },
-            breakpoints: {
-               1200: {
-                  slidesPerView: 3,
-               },
-               576: {
-                  slidesPerView: "auto",
-               },
-               320: {
-                  slidesPerView: "auto",
-               },
-            },
-         });
       }
    };
-   loadSwiperPlugin();
-   window.onscroll = loadSwiperPlugin;
+   initSwiperPlugin();
+   window.onscroll = initSwiperPlugin;
 
    AOS.init({
       once: true,
