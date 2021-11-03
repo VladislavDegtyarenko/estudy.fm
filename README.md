@@ -27,6 +27,8 @@ Design was developed using Figma. [Click here](https://www.figma.com/file/tqtgdQ
   
 </p>
 
+### PageSpeed Insights
+![1](https://user-images.githubusercontent.com/62521930/140179117-2a0fc229-2b36-4b27-b926-0d79bd0dd162.jpg)
 
 
 ### Usage
