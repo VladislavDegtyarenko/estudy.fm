@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
    };
 
    /* load swiper and its sliders */
-   /*    const initSwiperPlugin = () => {
+   const initSwiperPlugin = () => {
       let windowHeight = document.documentElement.clientHeight;
       let scrolled = document.documentElement.scrollTop;
 
@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
    };
    initSwiperPlugin();
-   window.onscroll = initSwiperPlugin; */
-   const swiperScriptSrc = "js/swiper-bundle.min.js";
-   loadScript(swiperScriptSrc, sliderSettings);
+   window.onscroll = initSwiperPlugin;
+   /* const swiperScriptSrc = "js/swiper-bundle.min.js";
+   loadScript(swiperScriptSrc, sliderSettings); */
 
    /* Load Animate on scroll */
    const aosScriptSrc = "js/aos.js",
