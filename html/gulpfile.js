@@ -94,6 +94,24 @@ gulp.task("critical", () => {
                html: "dist/index.html",
                css: "dist/css/uncritical.css",
             },
+            dimensions: [
+               {
+                  width: 320,
+                  height: 568,
+               },
+               {
+                  width: 375,
+                  height: 812,
+               },
+               {
+                  width: 1280,
+                  height: 720,
+               },
+               {
+                  width: 1920,
+                  height: 1080,
+               },
+            ],
          })
       )
       .pipe(gulp.dest("dist"));
