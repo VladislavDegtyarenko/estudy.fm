@@ -96,12 +96,8 @@ gulp.task("critical", () => {
             },
             dimensions: [
                {
-                  width: 320,
-                  height: 568,
-               },
-               {
-                  width: 375,
-                  height: 812,
+                  width: 360,
+                  height: 640,
                },
                {
                   width: 1280,

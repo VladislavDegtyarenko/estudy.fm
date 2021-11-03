@@ -9,7 +9,7 @@
    </head>
    <body>
       <header class="header">
-         <a href="#" class="logo header__logo">
+         <a href="#" class="logo header__logo" aria-label="Logo Button">
             <picture>
                <source srcset="img/logo.webp" type="image/webp" />
                <source srcset="img/logo.png" type="image/png" />
@@ -42,7 +42,7 @@
             </ul>
          </nav>
 
-         <button class="hamburger">
+         <button class="hamburger" aria-label="open mobile menu">
             <span></span>
             <span></span>
             <span></span>
@@ -581,13 +581,25 @@
 
             <div class="how__wrapper">
                <div class="how__video" data-aos="custom-fade-up-reveal" data-aos-delay="300" data-aos-duration="1000">
-                  <button type="button" class="how__video_play" data-bs-toggle="modal" data-bs-target="#modalVideo1">
+                  <button
+                     aria-label="play the video"
+                     type="button"
+                     class="how__video_play"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modalVideo1"
+                  >
                      <img class="how__video_icon" src="icons/slider-next.svg" alt="" loading="lazy" />
                   </button>
                </div>
 
                <div class="how__video" data-aos="custom-fade-up-reveal" data-aos-delay="300" data-aos-duration="1000">
-                  <button type="button" class="how__video_play" data-bs-toggle="modal" data-bs-target="#modalVideo2">
+                  <button
+                     aria-label="play the video"
+                     type="button"
+                     class="how__video_play"
+                     data-bs-toggle="modal"
+                     data-bs-target="#modalVideo2"
+                  >
                      <img class="how__video_icon" src="icons/slider-next.svg" alt="" loading="lazy" />
                   </button>
                </div>
@@ -650,16 +662,17 @@
                   <div class="footer__links">
                      <h3 class="footer__links_title">Socials</h3>
                      <div class="footer__links_inner">
-                        <a href="#" class="footer__links_social">
+                        <a href="#" class="footer__links_social" aria-label="visit our facebook page">
                            <img src="icons/fb.svg" alt="" loading="lazy" />
                         </a>
-                        <a href="#" class="footer__links_social">
+                        <a href="#" class="footer__links_social" aria-label="visit our instagram page">
                            <img src="icons/ig.svg" alt="" loading="lazy" />
                         </a>
                         <a
                            href="https://www.youtube.com/channel/UCeYqQrSfyhw5uD5ioyD5eKA"
                            target="_blank"
                            class="footer__links_social"
+                           aria-label="visit our youtube channel"
                         >
                            <img src="icons/yt.svg" alt="" loading="lazy" />
                         </a>
