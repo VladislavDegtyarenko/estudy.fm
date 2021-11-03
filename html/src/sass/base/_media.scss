@@ -88,10 +88,10 @@
             height: 120px;
             top: calc(50% - 60px);
             left: calc(50% - 60px);
-            img {
-               width: 48px;
-               height: 48px;
-            }
+         }
+         &_icon {
+            width: 48px;
+            height: 48px;
          }
       }
    }
@@ -132,9 +132,9 @@
          height: 60px;
          margin-bottom: 30px;
       }
-      &__hamburger {
-         display: inline-block;
-      }
+   }
+   .hamburger {
+      display: inline-block;
    }
    .nav {
       display: block;
@@ -334,16 +334,6 @@
       &__video {
          margin-bottom: 30px;
       }
-      /*       &__video {
-         width: 680px;
-         height: 330px;
-         &_play {
-            width: 132px;
-            height: 132px;
-            top: calc(50% - 66px);
-            left: calc(50% - 66px);
-         }
-      } */
    }
    .testimonials {
       padding: 110px 0 106px;
@@ -633,7 +623,7 @@
             top: calc(50% - 39px);
             left: calc(50% - 39px);
          }
-         img {
+         &_icon {
             width: 25px;
             height: 25px;
             margin-left: 5px;

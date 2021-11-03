@@ -2,16 +2,16 @@
    padding: 177px 0 138px;
    background-color: #e7ecee;
    overflow: hidden;
+   .swiper-pagination {
+      display: none;
+   }
+   .swiper-slide {
+      height: unset;
+   }
    &__wrapper {
       display: flex;
       justify-content: space-between;
       position: relative;
-      .swiper-pagination {
-         display: none;
-      }
-      .swiper-slide {
-         height: unset;
-      }
    }
    &__card {
       height: 100%;

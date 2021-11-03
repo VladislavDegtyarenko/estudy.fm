@@ -83,11 +83,11 @@ document.addEventListener("DOMContentLoaded", function () {
       });
    });
 
-   const hamburgerMenu = document.querySelector(".header__hamburger");
+   const hamburgerMenu = document.querySelector(".hamburger");
    const navMenu = document.querySelector(".nav");
 
    hamburgerMenu.addEventListener("click", function () {
-      this.classList.toggle("header__hamburger-active");
+      this.classList.toggle("hamburger-active");
       navMenu.classList.toggle("nav-active");
       document.body.classList.toggle("noScroll");
    });
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
    jsCloseHamburgerMenu.forEach((menuLink) => {
       menuLink.addEventListener("click", () => {
          navMenu.classList.remove("nav-active");
-         hamburgerMenu.classList.remove("header__hamburger-active");
+         hamburgerMenu.classList.remove("hamburger-active");
          document.body.classList.remove("noScroll");
       });
    });

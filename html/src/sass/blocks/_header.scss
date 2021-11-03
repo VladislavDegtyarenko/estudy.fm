@@ -1,5 +1,5 @@
 .header {
-   background-color: #307FDA;
+   background-color: #307fda;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -7,7 +7,7 @@
    position: fixed;
    z-index: 2;
    width: 100%;
-   background-color: rgba($color: #307FDA, $alpha: 1);
+   background-color: rgba($color: #307fda, $alpha: 1);
    &__logo {
       width: 61px;
       height: 61px;
@@ -17,57 +17,5 @@
       line-height: 17.57px;
       width: 147px;
       height: 40px;
-   }
-   &__hamburger {
-      display: none;
-      padding: 10px;
-      border: none;
-      background: none;
-      width: 44px;
-      height: 44px;
-      cursor: pointer;
-      position: relative;
-      &:focus {
-         outline: none;
-      }
-      span {
-         position: relative;
-         width: 22px;
-         height: 2px;
-         border-radius: 10px;
-         background-color: #fff;
-         display: block;
-         transition: all .3s linear;
-         pointer-events: none;
-         transform-origin: left;
-         &:not(:last-child) {
-            margin-bottom: 5px;
-         }
-         &:nth-child(1) {
-            transform: rotate(0deg);
-            top: 0px;
-         }
-         &:nth-child(2) {
-            opacity: 1;
-         }
-         &:nth-child(3) {
-            transform: rotate(0deg);
-            top: 0px;
-         }
-      }
-
-      &-active {
-         span:nth-child(1) {
-            transform: rotate(45deg);
-            width: 20px;
-         }
-         span:nth-child(2) {
-            opacity: 0;
-         }
-         span:nth-child(3) {
-            transform: rotate(-45deg);
-            width: 20px;
-         }
-      }
    }
 }
