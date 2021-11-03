@@ -20,11 +20,12 @@
       position: relative;
       border-radius: 10px;
       overflow: hidden;
-      background-image: url("../img/how-it-works.jpg");
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
       margin: 0 10px;
+      &_preview {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
       &_play {
          border-radius: 100%;
          border: none;
