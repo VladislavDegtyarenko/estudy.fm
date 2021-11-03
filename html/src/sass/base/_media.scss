@@ -35,7 +35,7 @@
          margin-top: 60px;
       }
       &__img {
-         object-fit: contain;
+         height: 580px;
       }
    }
    .start {
@@ -145,10 +145,10 @@
       bottom: 0;
       width: 100%;
       height: 100%;
-      background: #307FDA;
+      background: #307fda;
       align-items: center;
       overflow: auto;
-      transition: all .5s linear;
+      transition: all 0.5s linear;
       &-active {
          display: flex;
          top: 0;
@@ -164,7 +164,7 @@
          justify-content: space-between;
          flex-direction: column;
          position: relative;
-         transition: all .5s linear;
+         transition: all 0.5s linear;
       }
       &__item:not(:last-child) {
          margin-right: 0;
@@ -176,7 +176,7 @@
       &__line {
          width: 30px;
          height: 4px;
-         background-color: #3298FF;
+         background-color: #3298ff;
          display: block;
          margin: 10px auto;
          flex-shrink: 0;
@@ -195,8 +195,7 @@
          margin-top: 10px;
       }
       &__img {
-         align-self: unset;
-         width: 61%;
+         height: 480px;
       }
       &__logo {
          display: none;
@@ -216,8 +215,10 @@
       &__card {
          flex-wrap: wrap;
          &:nth-of-type(2) {
-            flex-direction: column-reverse;
             margin-top: 60px;
+            .start__card_heading {
+               order: 2;
+            }
          }
          &_img {
             width: 100%;
@@ -231,7 +232,7 @@
          }
          &_item {
             &:not(:last-child):after {
-               content: url('../icons/union.svg');
+               content: url("../icons/union.svg");
                margin-left: 30px;
                margin-right: 40px;
             }
@@ -244,18 +245,17 @@
          width: 700px;
       }
       &__wrapper {
-         grid-template-columns: repeat(3,1fr);
+         grid-template-columns: repeat(3, 1fr);
          margin-top: 95px;
       }
       &__card {
          &_inner {
-         font-size: 14px;
-         line-height: 19.6px;
-         padding: 20px 15px;
+            font-size: 14px;
+            line-height: 19.6px;
+            padding: 20px 15px;
          }
       }
       &__lines {
-         
          &_vertical {
             span {
                &:nth-child(1) {
@@ -334,7 +334,7 @@
       &__video {
          margin-bottom: 30px;
       }
-/*       &__video {
+      /*       &__video {
          width: 680px;
          height: 330px;
          &_play {
@@ -478,9 +478,6 @@
       &__main {
          width: 100%;
       }
-      &__img {
-         width: 85%;
-      }
       &__title {
          margin-top: 0;
       }
@@ -517,7 +514,7 @@
    .solution {
       padding: 50px 0 30px;
       &__wrapper {
-         grid-template-columns: repeat(2,1fr);
+         grid-template-columns: repeat(2, 1fr);
       }
       &__card {
          &_inner {
@@ -528,7 +525,6 @@
          }
       }
       &__lines {
-         
          &_vertical {
             span {
                &:nth-child(1) {
@@ -596,6 +592,7 @@
          }
          &_img {
             width: 90px;
+            height: 90px;
             margin-right: 25px;
          }
       }
@@ -670,7 +667,7 @@
                display: flex;
                flex-grow: 1;
                height: 1px;
-               background-image: url('../icons/footer-line.svg');
+               background-image: url("../icons/footer-line.svg");
                background-repeat: repeat-x;
                margin-left: 9px;
                margin-right: 29px;
@@ -696,6 +693,9 @@
    .promo {
       &__button {
          margin: 55px auto 0;
+      }
+      &__img {
+         height: 380px;
       }
    }
    .start {

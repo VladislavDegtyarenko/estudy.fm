@@ -1,6 +1,6 @@
 .work {
    padding: 177px 0 138px;
-   background-color: #E7ECEE;
+   background-color: #e7ecee;
    overflow: hidden;
    &__wrapper {
       display: flex;
@@ -23,21 +23,22 @@
          width: 300px;
          height: 100%;
          margin: 0px auto;
-         background: #FFF;
+         background: #fff;
          box-shadow: 0px 10px 20px rgba(173, 185, 196, 0.35);
          border-radius: 10px;
          overflow: hidden;
       }
-      img {
+      &_img {
          width: 100%;
-         height: auto;
+         height: 320px;
+         object-fit: contain;
       }
       hr {
          margin: 18px auto;
          border: none;
          height: 1px;
          width: 186px;
-         background-color: #E7ECEE;
+         background-color: #e7ecee;
       }
       &_heading {
          padding: 40px 31px 29px;

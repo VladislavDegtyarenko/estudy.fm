@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
    let swiperIsLoaded = false;
 
-   const loadScript = (scriptSrc, onLoadFunc) => {
+   const loadScript = (scriptSrc, onLoadFunction) => {
       let script = document.createElement("script");
       script.src = scriptSrc;
       document.body.appendChild(script);
-      script.onload = onLoadFunc;
+      script.onload = onLoadFunction;
    };
 
    const sliderSettings = () => {
@@ -106,20 +106,20 @@ document.addEventListener("DOMContentLoaded", function () {
       iframe.src = url;
    };
 
-   const unloadIframe = (iframe) => {
-      iframe.src = "";
-   };
+   const unloadIframe = (iframe) => (iframe.src = "");
 
-   const howToModal = document.querySelectorAll(".modalVideo");
+   const howToModals = document.querySelectorAll(".modalVideo");
 
-   howToModal.forEach((modal, index) => {
+   howToModals.forEach((modal, index) => {
       const iframe = modal.querySelector("iframe");
+      const modalOpenEvent = "shown.bs.modal";
+      const modalHideEvent = "hide.bs.modal";
 
-      modal.addEventListener("shown.bs.modal", () => {
+      modal.addEventListener(modalOpenEvent, () => {
          loadIframe(iframe);
       });
 
-      modal.addEventListener("hide.bs.modal", () => {
+      modal.addEventListener(modalHideEvent, () => {
          unloadIframe(iframe);
       });
    });
