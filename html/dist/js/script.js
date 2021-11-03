@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+   /* swiper load state */
    let swiperIsLoaded = false;
 
+   /* append (load) script to body function */
    const loadScript = (scriptSrc, onLoadFunction) => {
       let script = document.createElement("script");
       script.src = scriptSrc;
@@ -8,6 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
       script.onload = onLoadFunction;
    };
 
+   /* initialize (load/unload) iframe functions */
+   const loadIframe = (iframe) => {
+      const url = iframe.getAttribute("data-src");
+      iframe.src = url;
+   };
+
+   const unloadIframe = (iframe) => (iframe.src = "");
+
+   /* settings for swiper sliders */
    const sliderSettings = () => {
       const testimonialsSlider = new Swiper("#testimonialsSlider", {
          loop: true,
@@ -56,7 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
    };
 
-   const initSwiperPlugin = () => {
+   /* load swiper and its sliders */
+   /*    const initSwiperPlugin = () => {
       let windowHeight = document.documentElement.clientHeight;
       let scrolled = document.documentElement.scrollTop;
 
@@ -67,22 +79,24 @@ document.addEventListener("DOMContentLoaded", function () {
       }
    };
    initSwiperPlugin();
-   window.onscroll = initSwiperPlugin;
+   window.onscroll = initSwiperPlugin; */
+   const swiperScriptSrc = "js/swiper-bundle.min.js";
+   loadScript(swiperScriptSrc, sliderSettings);
 
-   AOS.init({
-      once: true,
-   });
+   /* Load Animate on scroll */
+   const aosScriptSrc = "js/aos.js",
+      aosSettings = () => {
+         AOS.init({
+            once: true,
+         });
+      };
+   loadScript(aosScriptSrc, aosSettings);
 
-   const collapseFooterMenus = document.querySelectorAll(".collapse");
-   collapseFooterMenus.forEach((hiddenContent) => {
-      hiddenContent.addEventListener("show.bs.collapse", () => {
-         hiddenContent.previousElementSibling.classList.add("footer__links_collapse-active");
-      });
-      hiddenContent.addEventListener("hide.bs.collapse", () => {
-         hiddenContent.previousElementSibling.classList.remove("footer__links_collapse-active");
-      });
-   });
+   /* Load Bootstrap */
+   const bootstrapSrc = "js/bootstrap.min.js";
+   loadScript(bootstrapSrc);
 
+   /* mobile menu */
    const hamburgerMenu = document.querySelector(".hamburger");
    const navMenu = document.querySelector(".nav");
 
@@ -101,13 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
    });
 
-   const loadIframe = (iframe) => {
-      const url = iframe.getAttribute("data-src");
-      iframe.src = url;
-   };
-
-   const unloadIframe = (iframe) => (iframe.src = "");
-
+   /* how to videos and their modals */
    const howToModals = document.querySelectorAll(".modalVideo");
 
    howToModals.forEach((modal, index) => {
@@ -121,6 +129,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       modal.addEventListener(modalHideEvent, () => {
          unloadIframe(iframe);
+      });
+   });
+
+   /* footer accordions */
+   const collapseFooterMenus = document.querySelectorAll(".collapse");
+   collapseFooterMenus.forEach((hiddenContent) => {
+      hiddenContent.addEventListener("show.bs.collapse", () => {
+         hiddenContent.previousElementSibling.classList.add("footer__links_collapse-active");
+      });
+      hiddenContent.addEventListener("hide.bs.collapse", () => {
+         hiddenContent.previousElementSibling.classList.remove("footer__links_collapse-active");
       });
    });
 });
